@@ -35,11 +35,15 @@ namespace PardoCasanova_BenitezEstruch
 
         public static bool isTextEmpty(string text)
         {
-            text = text.Trim();
-            if (text.Equals(""))
+            if(text != null)
             {
-                return true;
+                text = text.Trim();
+                if (text.Equals(""))
+                {
+                    return true;
+                }
             }
+            
 
             return false;
         }

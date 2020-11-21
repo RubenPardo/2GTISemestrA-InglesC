@@ -26,6 +26,7 @@ namespace PardoCasanova_BenitezEstruch
             get { return id; }
             set
             {
+                Console.WriteLine(value);
                 if (!Utility.isTextEmpty(id))
                 {
                     id = value;
@@ -43,6 +44,7 @@ namespace PardoCasanova_BenitezEstruch
             // it can't be empty text and will be always normalize "text->"Text"
             set
             {
+                Console.WriteLine(value);
                 if (!Utility.isTextEmpty(value))
                 {
                     name = Utility.normalizeText(value);
@@ -61,6 +63,7 @@ namespace PardoCasanova_BenitezEstruch
             // only can take the "SENSOR"|"MICRO" values, will be normalize
             set
             {
+                Console.WriteLine(value);
                 if (isValidType(value))
                 {
                     type = value.ToUpper();
@@ -80,6 +83,7 @@ namespace PardoCasanova_BenitezEstruch
             // it can't be empty text and will be always normalize "text->"Text"
             set
             {
+                Console.WriteLine(value);
                 if (!Utility.isTextEmpty(value))
                 {
                     manufacturer = Utility.normalizeText(value);
@@ -98,6 +102,7 @@ namespace PardoCasanova_BenitezEstruch
             // it can be empty text and will be always normalize "text->"Text"
             set
             {
+                Console.WriteLine(value);
                 description = Utility.normalizeText(value);
             }
         }
@@ -108,6 +113,7 @@ namespace PardoCasanova_BenitezEstruch
             // try to convert to double and not negative
             set
             {
+                Console.WriteLine(value);
                 if (isPositiveDecimalValue(value))
                 {
                     price = value;
@@ -123,6 +129,7 @@ namespace PardoCasanova_BenitezEstruch
             get { return stock; }
             set
             {
+                Console.WriteLine(value);
                 // only positive integer numbers
                 if (isPositiveIntegerValue(value))
                 {
@@ -183,7 +190,7 @@ namespace PardoCasanova_BenitezEstruch
             {
                 return true;
             }
-            Match matchDecimal = Regex.Match(number, @"^[0 - 9]\d *.\d * $");
+            Match matchDecimal = Regex.Match(number, @"^[0-9]\d*.\d*$");
             if (matchDecimal.Success)
             {
                 return true;
@@ -191,6 +198,12 @@ namespace PardoCasanova_BenitezEstruch
 
             return false;
 
+        }
+
+
+        // de esta forma si ponemos objetos directamente en el list box, como intente hacer el to string, saldra solo el nombre
+        public override string ToString() {
+            return NAME;
         }
     }
 }

@@ -18,3 +18,18 @@ C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\Pard
 C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.GenerateResource.cache
 C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.exe
 C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.pdb
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe.config
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.pdb
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\Newtonsoft.Json.dll
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\Newtonsoft.Json.xml
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csprojAssemblyReference.cache
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form1.resources
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form2.resources
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Properties.Resources.resources
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.GenerateResource.cache
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.CoreCompileInputs.cache
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.CopyComplete
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.exe
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.pdb
+F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Resource1.resources
