@@ -68,7 +68,7 @@
             this.listBoxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listBoxProducts.FormattingEnabled = true;
             this.listBoxProducts.ItemHeight = 22;
-            this.listBoxProducts.Location = new System.Drawing.Point(25, 129);
+            this.listBoxProducts.Location = new System.Drawing.Point(36, 129);
             this.listBoxProducts.Name = "listBoxProducts";
             this.listBoxProducts.Size = new System.Drawing.Size(301, 334);
             this.listBoxProducts.TabIndex = 0;
@@ -134,7 +134,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.button1.Location = new System.Drawing.Point(254, 87);
+            this.button1.Location = new System.Drawing.Point(265, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 36);
             this.button1.TabIndex = 7;
@@ -185,7 +185,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(264, 419);
+            this.label7.Location = new System.Drawing.Point(254, 425);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 12;
@@ -203,7 +203,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(25, 479);
+            this.btnAdd.Location = new System.Drawing.Point(36, 479);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(301, 34);
             this.btnAdd.TabIndex = 14;
@@ -212,7 +212,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(25, 528);
+            this.button3.Location = new System.Drawing.Point(36, 528);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 33);
             this.button3.TabIndex = 15;
@@ -221,7 +221,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(187, 528);
+            this.button4.Location = new System.Drawing.Point(198, 528);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(139, 34);
             this.button4.TabIndex = 16;
@@ -240,7 +240,7 @@
             // txtManufacturer
             // 
             this.txtManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtManufacturer.Location = new System.Drawing.Point(170, 122);
+            this.txtManufacturer.Location = new System.Drawing.Point(170, 121);
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(297, 28);
             this.txtManufacturer.TabIndex = 18;
@@ -260,7 +260,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtPrice.Location = new System.Drawing.Point(386, 416);
+            this.txtPrice.Location = new System.Drawing.Point(386, 425);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(81, 28);
             this.txtPrice.TabIndex = 20;
@@ -275,7 +275,7 @@
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtStock.Location = new System.Drawing.Point(170, 168);
+            this.txtStock.Location = new System.Drawing.Point(170, 169);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(81, 28);
             this.txtStock.TabIndex = 22;
@@ -328,9 +328,9 @@
             this.groupBoxInformation.Controls.Add(this.label7);
             this.groupBoxInformation.Controls.Add(this.txtManufacturer);
             this.groupBoxInformation.Controls.Add(this.label8);
-            this.groupBoxInformation.Location = new System.Drawing.Point(395, 105);
+            this.groupBoxInformation.Location = new System.Drawing.Point(395, 94);
             this.groupBoxInformation.Name = "groupBoxInformation";
-            this.groupBoxInformation.Size = new System.Drawing.Size(487, 450);
+            this.groupBoxInformation.Size = new System.Drawing.Size(487, 468);
             this.groupBoxInformation.TabIndex = 26;
             this.groupBoxInformation.TabStop = false;
             // 
