@@ -54,5 +54,11 @@ namespace PardoCasanova_BenitezEstruch
 
         }
 
+        public static void showDialogWarning(String title, String message)
+        {
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+
     }
 }

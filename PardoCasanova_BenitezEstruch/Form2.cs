@@ -18,6 +18,7 @@ namespace PardoCasanova_BenitezEstruch
     public partial class Form2 : Form
     {
 
+        private bool isEdit = false;
 
         private ProductList productList;
         // El path directory name pilla la ruta del .exe que esta donde el directory data
@@ -137,27 +138,33 @@ namespace PardoCasanova_BenitezEstruch
         }
         private void itemToInfoGroup(Product item)
         {
-            txtName.Text = item.NAME;
-            txtManufacturer.Text = item.MANUFACTURER;
-            txtDescript.Text = item.DESCRIPTION;
-            txtPrice.Text = item.PRICE;
-            txtStock.Text = item.STOCK;
-            if (item.TYPE.Equals("MICRO"))
+
+            if (item != null)
             {
-                radioMicrocontroller.Checked = true;
-                radioSensor.Checked = false;
+                txtName.Text = item.NAME;
+                txtManufacturer.Text = item.MANUFACTURER;
+                txtDescript.Text = item.DESCRIPTION;
+                txtPrice.Text = item.PRICE;
+                txtStock.Text = item.STOCK;
+                if (item.TYPE.Equals("MICRO"))
+                {
+                    radioMicrocontroller.Checked = true;
+                    radioSensor.Checked = false;
+                }
+                else
+                {
+                    radioSensor.Checked = true;
+                    radioMicrocontroller.Checked = false;
+                }
             }
-            else
-            {
-                radioSensor.Checked = true;
-                radioMicrocontroller.Checked = false;
-            }
+            
         }
 
     
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            isEdit = false;
             clearFormProduct();
             enableDisableInfoGroupListBox(true);
           
@@ -194,13 +201,41 @@ namespace PardoCasanova_BenitezEstruch
                 // si hay un radio button seleccionado
                 try
                 {
-                    // creamos el producto (aqui ya estan todas las validaciones
-                    Product product = new Product(name, checkedButton.Tag.ToString(), manufacturer, desc, price, stock);
-                    saveNewProduct(product); // lo guardamos tanto en el array, en el list box y en el fichero
+
+                    Product product;
+
+                    if (!isEdit)
+                    {
+                        
+                        // creamos el producto (aqui ya estan todas las validaciones
+                        product = new Product(name, checkedButton.Tag.ToString(), manufacturer, desc, price, stock);
+                        saveNewProduct(product); // lo guardamos tanto en el array, en el list box y en el fichero
+
+                    }
+                    else
+                    {
+
+                        product = (Product)listBoxProducts.SelectedItem;
+                        productList.products.Remove((Product)listBoxProducts.SelectedItem);
+                        
+
+                        product.STOCK = stock;
+                        product.NAME = name;
+                        product.DESCRIPTION = desc;
+                        product.MANUFACTURER = manufacturer;
+                        product.TYPE = checkedButton.Tag.ToString();
+
+                        editProduct(product);
+
+                        listBoxProducts.Items.Remove((Product)listBoxProducts.SelectedItem);
+
+                        
+                    }
+
                     listBoxProducts.SelectedItem = product;// seleccionamos el producto
+
                     itemToInfoGroup(product);// lo ponemos en el formulario
                     enableDisableInfoGroupListBox(false);// desactivamos el formulario
-
 
                 }
                 catch(ArgumentException error)
@@ -219,6 +254,18 @@ namespace PardoCasanova_BenitezEstruch
 
            
         }
+
+        private void editProduct(Product product)
+        {
+           
+            productList.products.Add(product);
+
+            string jsonData = JsonConvert.SerializeObject(productList);
+            File.WriteAllText(productsFileName, jsonData);
+
+            listBoxProducts.Items.Add(product);
+        }
+
         private void saveNewProduct(Product product)
         {
             productList.products.Add(product);
@@ -236,6 +283,20 @@ namespace PardoCasanova_BenitezEstruch
             txtStock.Text = "";
             radioSensor.Checked = false;
             radioMicrocontroller.Checked = false;
+        }
+
+
+        // editar=================
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listBoxProducts.SelectedItem != null){
+                isEdit = true;
+                enableDisableInfoGroupListBox(true);
+            }
+            else
+            {
+                Utility.showDialogWarning("Warning", "You must select a product");
+            }
         }
     }
 
