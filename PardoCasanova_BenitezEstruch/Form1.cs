@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace PardoCasanova_BenitezEstruch
 {
     public partial class Form1 : Form
@@ -30,7 +32,7 @@ namespace PardoCasanova_BenitezEstruch
                 this.Close();
             }
             else if(password.Length == 0){
-                MessageBox.Show("Please, insert a password");
+                Utility.showDialogError("Password field is empty.","Please, insert a password.");
             }
             else
             {
@@ -38,10 +40,10 @@ namespace PardoCasanova_BenitezEstruch
                 int attempts = 3 - count;
                 if (attempts == 0)
                 {
-                    MessageBox.Show("You are not authorized to enter the application. ");
+                    Utility.showDialogError("Login Error", "You exceeded the maximum login tries.");
                     this.Close();
                 }
-                MessageBox.Show("The password is not correct.\n" + attempts.ToString() + " attempts.");
+                Utility.showDialogError("Error password","The password is not correct.\n" + attempts.ToString() + " attempts.");
             }
         }
     }
