@@ -145,6 +145,35 @@ namespace PardoCasanova_BenitezEstruch
             }
         }
 
+        private void txtStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescript_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtManufacturer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupTipoProducto_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
