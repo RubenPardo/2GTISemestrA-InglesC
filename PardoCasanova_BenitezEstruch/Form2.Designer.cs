@@ -55,10 +55,10 @@
             this.txtStock = new System.Windows.Forms.TextBox();
             this.radioSensor = new System.Windows.Forms.RadioButton();
             this.radioMicrocontroller = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupTipoProducto = new System.Windows.Forms.GroupBox();
             this.groupBoxInformation = new System.Windows.Forms.GroupBox();
             this.menuStrip2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupTipoProducto.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             this.listBoxProducts.Name = "listBoxProducts";
             this.listBoxProducts.Size = new System.Drawing.Size(301, 334);
             this.listBoxProducts.TabIndex = 0;
+            this.listBoxProducts.SelectedIndexChanged += new System.EventHandler(this.listBoxProducts_SelectedIndexChanged);
             // 
             // menuStrip2
             // 
@@ -244,8 +245,7 @@
             // 
             // txtDescript
             // 
-            this.txtDescript.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescript.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescript.BackColor = System.Drawing.SystemColors.Window;
             this.txtDescript.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.txtDescript.Location = new System.Drawing.Point(156, 187);
             this.txtDescript.Multiline = true;
@@ -297,21 +297,21 @@
             this.radioMicrocontroller.Text = "Microcontroller";
             this.radioMicrocontroller.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupTipoProducto
             // 
-            this.groupBox1.Controls.Add(this.radioMicrocontroller);
-            this.groupBox1.Controls.Add(this.radioSensor);
-            this.groupBox1.Location = new System.Drawing.Point(156, 74);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 45);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
+            this.groupTipoProducto.Controls.Add(this.radioMicrocontroller);
+            this.groupTipoProducto.Controls.Add(this.radioSensor);
+            this.groupTipoProducto.Location = new System.Drawing.Point(156, 74);
+            this.groupTipoProducto.Name = "groupTipoProducto";
+            this.groupTipoProducto.Size = new System.Drawing.Size(297, 45);
+            this.groupTipoProducto.TabIndex = 25;
+            this.groupTipoProducto.TabStop = false;
             // 
             // groupBoxInformation
             // 
             this.groupBoxInformation.Controls.Add(this.txtName);
             this.groupBoxInformation.Controls.Add(this.label3);
-            this.groupBoxInformation.Controls.Add(this.groupBox1);
+            this.groupBoxInformation.Controls.Add(this.groupTipoProducto);
             this.groupBoxInformation.Controls.Add(this.label4);
             this.groupBoxInformation.Controls.Add(this.txtStock);
             this.groupBoxInformation.Controls.Add(this.label5);
@@ -347,8 +347,8 @@
             this.Text = "Form2";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupTipoProducto.ResumeLayout(false);
+            this.groupTipoProducto.PerformLayout();
             this.groupBoxInformation.ResumeLayout(false);
             this.groupBoxInformation.PerformLayout();
             this.ResumeLayout(false);
@@ -384,7 +384,7 @@
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.RadioButton radioSensor;
         private System.Windows.Forms.RadioButton radioMicrocontroller;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupTipoProducto;
         private System.Windows.Forms.GroupBox groupBoxInformation;
     }
 }

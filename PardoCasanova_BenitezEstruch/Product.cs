@@ -199,5 +199,11 @@ namespace PardoCasanova_BenitezEstruch
             return false;
 
         }
+
+
+        // de esta forma si ponemos objetos directamente en el list box, como intente hacer el to string, saldra solo el nombre
+        public override string ToString() {
+            return NAME;
+        }
     }
 }
