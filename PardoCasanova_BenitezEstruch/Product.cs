@@ -144,9 +144,9 @@ namespace PardoCasanova_BenitezEstruch
 
 
         // constructor
-        public Product(string id, string name, string type, string manufacturer, string description, string price, string stock)
+        public Product( string name, string type, string manufacturer, string description, string price, string stock)
         {
-            ID = id;
+            ID = Utility.generateID();
             NAME = name;
             TYPE = type;
             MANUFACTURER = manufacturer;
