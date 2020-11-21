@@ -26,7 +26,7 @@ namespace PardoCasanova_BenitezEstruch
         public Form2()
         {
             InitializeComponent();
-            enableInfoGroup(false);
+            enableDisableInfoGroupListBox(false);
             initListBox();
 
 
@@ -36,7 +36,6 @@ namespace PardoCasanova_BenitezEstruch
         // carga del json los productos
         private void initListBox()
         {
-            Console.WriteLine("path: " + productsFileName);
             try
             {
                 String jsonPlainContent = readFile(productsFileName);
@@ -44,7 +43,8 @@ namespace PardoCasanova_BenitezEstruch
                 
                 foreach (Product product in productList.products)
                 {
-                    listBoxProducts.Items.Add(product);
+                    listBoxProducts.Items.Add(product); // podemos añadir directamente los objetos porque hemos sobreescrito
+                                                        // el metodo to string del objeto que es lo que se muestra en la lista
                    
                 }
             }
@@ -52,8 +52,6 @@ namespace PardoCasanova_BenitezEstruch
             {
                Utility.showDialogError("Error when initializing", "Data to read was not found. The app are going to close");
                this.Close();
-
-
             }
             catch(ArgumentException error)
             {
@@ -91,38 +89,49 @@ namespace PardoCasanova_BenitezEstruch
             return sb.ToString();
         }
 
-
-
-        private void enableInfoGroup(bool enable)
+        private void enableDisableInfoGroupListBox(bool enableInfoGroup)
         {
-           
-            txtName.BackColor = enable ? SystemColors.Window : SystemColors.Control;
-            txtName.BorderStyle = enable ?  BorderStyle.Fixed3D : BorderStyle.None;
-            txtName.ReadOnly = !enable;
+           // cambiamos el estilo para que parezca el fondo
+           // los hacemos readonly
+           // y les quitamos el cursos por si al salir del editar se ha quedado
+            txtName.BackColor = enableInfoGroup ? SystemColors.Window : SystemColors.Control;
+            txtName.BorderStyle = enableInfoGroup ?  BorderStyle.Fixed3D : BorderStyle.None;
+            txtName.ReadOnly = !enableInfoGroup; 
+            txtName.TabStop = enableInfoGroup; 
 
-            txtManufacturer.BackColor = enable ? SystemColors.Window : SystemColors.Control;
-            txtManufacturer.BorderStyle = enable ? BorderStyle.Fixed3D : BorderStyle.None;
-            txtManufacturer.ReadOnly = !enable;
+            txtManufacturer.BackColor = enableInfoGroup ? SystemColors.Window : SystemColors.Control;
+            txtManufacturer.BorderStyle = enableInfoGroup ? BorderStyle.Fixed3D : BorderStyle.None;
+            txtManufacturer.ReadOnly = !enableInfoGroup;
+            txtManufacturer.TabStop = enableInfoGroup; 
 
-            txtDescript.BackColor = enable ? SystemColors.Window : SystemColors.Control;
-            txtDescript.BorderStyle = enable ? BorderStyle.Fixed3D : BorderStyle.None;
-            txtDescript.ReadOnly = !enable;
+            txtDescript.BackColor = enableInfoGroup ? SystemColors.Window : SystemColors.Control;
+            txtDescript.BorderStyle = enableInfoGroup ? BorderStyle.Fixed3D : BorderStyle.None;
+            txtDescript.ReadOnly = !enableInfoGroup;
+            txtDescript.TabStop = enableInfoGroup;
 
-            txtPrice.BackColor = enable ? SystemColors.Window : SystemColors.Control;
-            txtPrice.BorderStyle = enable ? BorderStyle.Fixed3D : BorderStyle.None;
-            txtPrice.ReadOnly = !enable;
+            txtPrice.BackColor = enableInfoGroup ? SystemColors.Window : SystemColors.Control;
+            txtPrice.BorderStyle = enableInfoGroup ? BorderStyle.Fixed3D : BorderStyle.None;
+            txtPrice.ReadOnly = !enableInfoGroup;
+            txtPrice.TabStop = enableInfoGroup; 
 
-            txtStock.BackColor = enable ? SystemColors.Window : SystemColors.Control;
-            txtStock.BorderStyle = enable ? BorderStyle.Fixed3D : BorderStyle.None;
-            txtStock.ReadOnly = !enable;
+            txtStock.BackColor = enableInfoGroup ? SystemColors.Window : SystemColors.Control;
+            txtStock.BorderStyle = enableInfoGroup ? BorderStyle.Fixed3D : BorderStyle.None;
+            txtStock.ReadOnly = !enableInfoGroup;
+            txtStock.TabStop = enableInfoGroup; 
 
-            groupTipoProducto.Enabled = enable;
+            groupProductType.Enabled = enableInfoGroup;
+
+            btnSave.Visible = enableInfoGroup;
+            btnCancel.Visible = enableInfoGroup;
+
+            groupBoxListBox.Enabled = !enableInfoGroup;
 
         }
-
+     
 
         private void listBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // mostramos el producto en el form
             Product item = (Product) listBoxProducts.SelectedItem;
             itemToInfoGroup(item);
         }
@@ -145,34 +154,88 @@ namespace PardoCasanova_BenitezEstruch
             }
         }
 
-        private void txtStock_TextChanged(object sender, EventArgs e)
-        {
+    
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            clearFormProduct();
+            enableDisableInfoGroupListBox(true);
+          
         }
-
-        private void txtPrice_TextChanged(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Product item = (Product)listBoxProducts.SelectedItem;
+            if (item != null)
+            {
+               // si habia un item seleccionado volverlo a poner
+                itemToInfoGroup(item);
+            }
+            else
+            {
+                clearFormProduct();
+            }
+            enableDisableInfoGroupListBox(false);
+            
+            
         }
-
-        private void txtDescript_TextChanged(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
+            // cogemos todos los datos
+            string name = txtName.Text;
+            string manufacturer = txtManufacturer.Text;
+            string desc = txtDescript.Text;
+            string price = txtPrice.Text;
+            string stock = txtStock.Text;
 
+            RadioButton checkedButton = groupProductType.Controls.OfType<RadioButton>()
+                                      .FirstOrDefault(r => r.Checked);
+            if(checkedButton != null)
+            {
+                // si hay un radio button seleccionado
+                try
+                {
+                    // creamos el producto (aqui ya estan todas las validaciones
+                    Product product = new Product(name, checkedButton.Tag.ToString(), manufacturer, desc, price, stock);
+                    saveNewProduct(product); // lo guardamos tanto en el array, en el list box y en el fichero
+                    listBoxProducts.SelectedItem = product;// seleccionamos el producto
+                    itemToInfoGroup(product);// lo ponemos en el formulario
+                    enableDisableInfoGroupListBox(false);// desactivamos el formulario
+
+
+                }
+                catch(ArgumentException error)
+                {
+                    Utility.showDialogError("Error creating a product", error.Message);
+                }catch(IOException error)
+                {
+                    Utility.showDialogError("Error creating a product", "Can not save the product because the json file does not exist");
+                }
+              
+            }
+            else
+            {
+                Utility.showDialogError("Error creating a product", "The product needs a type");
+            }
+
+           
         }
-
-        private void txtManufacturer_TextChanged(object sender, EventArgs e)
+        private void saveNewProduct(Product product)
         {
-
+            productList.products.Add(product);
+            string jsonData = JsonConvert.SerializeObject(productList);
+            File.WriteAllText(productsFileName, jsonData);
+            listBoxProducts.Items.Add(product);
         }
-
-        private void groupTipoProducto_Enter(object sender, EventArgs e)
+        // quitamos todo el texto de los formularios
+        private void clearFormProduct()
         {
-
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
+            txtName.Text = "";
+            txtManufacturer.Text = "";
+            txtDescript.Text = "";
+            txtPrice.Text = "";
+            txtStock.Text = "";
+            radioSensor.Checked = false;
+            radioMicrocontroller.Checked = false;
         }
     }
 

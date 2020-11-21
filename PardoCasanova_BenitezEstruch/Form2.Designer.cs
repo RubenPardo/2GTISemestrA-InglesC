@@ -55,12 +55,16 @@
             this.txtStock = new System.Windows.Forms.TextBox();
             this.radioSensor = new System.Windows.Forms.RadioButton();
             this.radioMicrocontroller = new System.Windows.Forms.RadioButton();
-            this.groupTipoProducto = new System.Windows.Forms.GroupBox();
+            this.groupProductType = new System.Windows.Forms.GroupBox();
             this.groupBoxInformation = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBoxListBox = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
-            this.groupTipoProducto.SuspendLayout();
+            this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
+            this.groupBoxListBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxProducts
@@ -68,7 +72,7 @@
             this.listBoxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listBoxProducts.FormattingEnabled = true;
             this.listBoxProducts.ItemHeight = 22;
-            this.listBoxProducts.Location = new System.Drawing.Point(36, 129);
+            this.listBoxProducts.Location = new System.Drawing.Point(25, 66);
             this.listBoxProducts.Name = "listBoxProducts";
             this.listBoxProducts.Size = new System.Drawing.Size(301, 334);
             this.listBoxProducts.TabIndex = 0;
@@ -118,7 +122,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.textBox1.Location = new System.Drawing.Point(25, 92);
+            this.textBox1.Location = new System.Drawing.Point(13, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(223, 27);
             this.textBox1.TabIndex = 5;
@@ -134,7 +138,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.button1.Location = new System.Drawing.Point(265, 87);
+            this.button1.Location = new System.Drawing.Point(259, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 36);
             this.button1.TabIndex = 7;
@@ -203,16 +207,17 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(36, 479);
+            this.btnAdd.Location = new System.Drawing.Point(25, 412);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(301, 34);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(36, 528);
+            this.button3.Location = new System.Drawing.Point(25, 463);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 33);
             this.button3.TabIndex = 15;
@@ -221,7 +226,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(198, 528);
+            this.button4.Location = new System.Drawing.Point(187, 463);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(139, 34);
             this.button4.TabIndex = 16;
@@ -235,7 +240,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(297, 28);
             this.txtName.TabIndex = 17;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtManufacturer
             // 
@@ -244,7 +248,6 @@
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(297, 28);
             this.txtManufacturer.TabIndex = 18;
-            this.txtManufacturer.TextChanged += new System.EventHandler(this.txtManufacturer_TextChanged);
             // 
             // txtDescript
             // 
@@ -255,7 +258,6 @@
             this.txtDescript.Name = "txtDescript";
             this.txtDescript.Size = new System.Drawing.Size(297, 173);
             this.txtDescript.TabIndex = 19;
-            this.txtDescript.TextChanged += new System.EventHandler(this.txtDescript_TextChanged);
             // 
             // txtPrice
             // 
@@ -264,7 +266,6 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(81, 28);
             this.txtPrice.TabIndex = 20;
-            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -279,7 +280,6 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(81, 28);
             this.txtStock.TabIndex = 22;
-            this.txtStock.TextChanged += new System.EventHandler(this.txtStock_TextChanged);
             // 
             // radioSensor
             // 
@@ -289,6 +289,7 @@
             this.radioSensor.Size = new System.Drawing.Size(74, 21);
             this.radioSensor.TabIndex = 23;
             this.radioSensor.TabStop = true;
+            this.radioSensor.Tag = "sensor";
             this.radioSensor.Text = "Sensor";
             this.radioSensor.UseVisualStyleBackColor = true;
             // 
@@ -300,25 +301,27 @@
             this.radioMicrocontroller.Size = new System.Drawing.Size(122, 21);
             this.radioMicrocontroller.TabIndex = 24;
             this.radioMicrocontroller.TabStop = true;
+            this.radioMicrocontroller.Tag = "micro";
             this.radioMicrocontroller.Text = "Microcontroller";
             this.radioMicrocontroller.UseVisualStyleBackColor = true;
             // 
-            // groupTipoProducto
+            // groupProductType
             // 
-            this.groupTipoProducto.Controls.Add(this.radioMicrocontroller);
-            this.groupTipoProducto.Controls.Add(this.radioSensor);
-            this.groupTipoProducto.Location = new System.Drawing.Point(170, 62);
-            this.groupTipoProducto.Name = "groupTipoProducto";
-            this.groupTipoProducto.Size = new System.Drawing.Size(297, 45);
-            this.groupTipoProducto.TabIndex = 25;
-            this.groupTipoProducto.TabStop = false;
-            this.groupTipoProducto.Enter += new System.EventHandler(this.groupTipoProducto_Enter);
+            this.groupProductType.Controls.Add(this.radioMicrocontroller);
+            this.groupProductType.Controls.Add(this.radioSensor);
+            this.groupProductType.Location = new System.Drawing.Point(170, 62);
+            this.groupProductType.Name = "groupProductType";
+            this.groupProductType.Size = new System.Drawing.Size(297, 45);
+            this.groupProductType.TabIndex = 25;
+            this.groupProductType.TabStop = false;
             // 
             // groupBoxInformation
             // 
+            this.groupBoxInformation.Controls.Add(this.btnCancel);
+            this.groupBoxInformation.Controls.Add(this.btnSave);
             this.groupBoxInformation.Controls.Add(this.txtName);
             this.groupBoxInformation.Controls.Add(this.label3);
-            this.groupBoxInformation.Controls.Add(this.groupTipoProducto);
+            this.groupBoxInformation.Controls.Add(this.groupProductType);
             this.groupBoxInformation.Controls.Add(this.label4);
             this.groupBoxInformation.Controls.Add(this.txtStock);
             this.groupBoxInformation.Controls.Add(this.label5);
@@ -330,7 +333,7 @@
             this.groupBoxInformation.Controls.Add(this.label8);
             this.groupBoxInformation.Location = new System.Drawing.Point(395, 94);
             this.groupBoxInformation.Name = "groupBoxInformation";
-            this.groupBoxInformation.Size = new System.Drawing.Size(487, 468);
+            this.groupBoxInformation.Size = new System.Drawing.Size(487, 509);
             this.groupBoxInformation.TabIndex = 26;
             this.groupBoxInformation.TabStop = false;
             // 
@@ -344,30 +347,61 @@
             this.label9.TabIndex = 27;
             this.label9.Text = "Product Information";
             // 
+            // groupBoxListBox
+            // 
+            this.groupBoxListBox.Controls.Add(this.textBox1);
+            this.groupBoxListBox.Controls.Add(this.listBoxProducts);
+            this.groupBoxListBox.Controls.Add(this.button1);
+            this.groupBoxListBox.Controls.Add(this.btnAdd);
+            this.groupBoxListBox.Controls.Add(this.button4);
+            this.groupBoxListBox.Controls.Add(this.button3);
+            this.groupBoxListBox.Location = new System.Drawing.Point(12, 78);
+            this.groupBoxListBox.Name = "groupBoxListBox";
+            this.groupBoxListBox.Size = new System.Drawing.Size(364, 525);
+            this.groupBoxListBox.TabIndex = 28;
+            this.groupBoxListBox.TabStop = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(6, 466);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(115, 37);
+            this.btnSave.TabIndex = 26;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(127, 466);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 37);
+            this.btnCancel.TabIndex = 27;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 609);
+            this.Controls.Add(this.groupBoxListBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBoxInformation);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.listBoxProducts);
             this.Name = "Form2";
             this.Text = "Form2";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.groupTipoProducto.ResumeLayout(false);
-            this.groupTipoProducto.PerformLayout();
+            this.groupProductType.ResumeLayout(false);
+            this.groupProductType.PerformLayout();
             this.groupBoxInformation.ResumeLayout(false);
             this.groupBoxInformation.PerformLayout();
+            this.groupBoxListBox.ResumeLayout(false);
+            this.groupBoxListBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,8 +435,11 @@
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.RadioButton radioSensor;
         private System.Windows.Forms.RadioButton radioMicrocontroller;
-        private System.Windows.Forms.GroupBox groupTipoProducto;
+        private System.Windows.Forms.GroupBox groupProductType;
         private System.Windows.Forms.GroupBox groupBoxInformation;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBoxListBox;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }
