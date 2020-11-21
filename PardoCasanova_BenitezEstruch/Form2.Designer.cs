@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.holaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,19 +56,21 @@
             this.radioSensor = new System.Windows.Forms.RadioButton();
             this.radioMicrocontroller = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxInformation = new System.Windows.Forms.GroupBox();
             this.menuStrip2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBoxInformation.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxProducts
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(28, 105);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(301, 334);
-            this.listBox1.TabIndex = 0;
+            this.listBoxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.listBoxProducts.FormattingEnabled = true;
+            this.listBoxProducts.ItemHeight = 22;
+            this.listBoxProducts.Location = new System.Drawing.Point(28, 105);
+            this.listBoxProducts.Name = "listBoxProducts";
+            this.listBoxProducts.Size = new System.Drawing.Size(301, 334);
+            this.listBoxProducts.TabIndex = 0;
             // 
             // menuStrip2
             // 
@@ -141,7 +143,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label3.Location = new System.Drawing.Point(363, 117);
+            this.label3.Location = new System.Drawing.Point(20, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 8;
@@ -151,7 +153,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label4.Location = new System.Drawing.Point(363, 172);
+            this.label4.Location = new System.Drawing.Point(20, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 9;
@@ -161,7 +163,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label5.Location = new System.Drawing.Point(363, 220);
+            this.label5.Location = new System.Drawing.Point(20, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
             this.label5.TabIndex = 10;
@@ -171,7 +173,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label6.Location = new System.Drawing.Point(363, 270);
+            this.label6.Location = new System.Drawing.Point(20, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 20);
             this.label6.TabIndex = 11;
@@ -181,7 +183,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label7.Location = new System.Drawing.Point(363, 398);
+            this.label7.Location = new System.Drawing.Point(20, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 20);
             this.label7.TabIndex = 12;
@@ -191,7 +193,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.label8.Location = new System.Drawing.Point(363, 445);
+            this.label8.Location = new System.Drawing.Point(20, 362);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 13;
@@ -227,7 +229,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtName.Location = new System.Drawing.Point(499, 117);
+            this.txtName.Location = new System.Drawing.Point(156, 34);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(297, 28);
             this.txtName.TabIndex = 17;
@@ -235,15 +237,17 @@
             // txtManufacturer
             // 
             this.txtManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtManufacturer.Location = new System.Drawing.Point(499, 217);
+            this.txtManufacturer.Location = new System.Drawing.Point(156, 134);
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(297, 28);
             this.txtManufacturer.TabIndex = 18;
             // 
             // txtDescript
             // 
+            this.txtDescript.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescript.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescript.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtDescript.Location = new System.Drawing.Point(499, 270);
+            this.txtDescript.Location = new System.Drawing.Point(156, 187);
             this.txtDescript.Multiline = true;
             this.txtDescript.Name = "txtDescript";
             this.txtDescript.Size = new System.Drawing.Size(297, 104);
@@ -252,7 +256,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtPrice.Location = new System.Drawing.Point(499, 398);
+            this.txtPrice.Location = new System.Drawing.Point(156, 315);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(81, 28);
             this.txtPrice.TabIndex = 20;
@@ -266,7 +270,7 @@
             // txtStock
             // 
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtStock.Location = new System.Drawing.Point(499, 440);
+            this.txtStock.Location = new System.Drawing.Point(156, 357);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(81, 28);
             this.txtStock.TabIndex = 22;
@@ -297,44 +301,56 @@
             // 
             this.groupBox1.Controls.Add(this.radioMicrocontroller);
             this.groupBox1.Controls.Add(this.radioSensor);
-            this.groupBox1.Location = new System.Drawing.Point(499, 157);
+            this.groupBox1.Location = new System.Drawing.Point(156, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(297, 45);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBoxInformation
+            // 
+            this.groupBoxInformation.Controls.Add(this.txtName);
+            this.groupBoxInformation.Controls.Add(this.label3);
+            this.groupBoxInformation.Controls.Add(this.groupBox1);
+            this.groupBoxInformation.Controls.Add(this.label4);
+            this.groupBoxInformation.Controls.Add(this.txtStock);
+            this.groupBoxInformation.Controls.Add(this.label5);
+            this.groupBoxInformation.Controls.Add(this.txtPrice);
+            this.groupBoxInformation.Controls.Add(this.label6);
+            this.groupBoxInformation.Controls.Add(this.txtDescript);
+            this.groupBoxInformation.Controls.Add(this.label7);
+            this.groupBoxInformation.Controls.Add(this.txtManufacturer);
+            this.groupBoxInformation.Controls.Add(this.label8);
+            this.groupBoxInformation.Location = new System.Drawing.Point(394, 47);
+            this.groupBoxInformation.Name = "groupBoxInformation";
+            this.groupBoxInformation.Size = new System.Drawing.Size(487, 510);
+            this.groupBoxInformation.TabIndex = 26;
+            this.groupBoxInformation.TabStop = false;
+            this.groupBoxInformation.Text = "Product Info";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 609);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtStock);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtDescript);
-            this.Controls.Add(this.txtManufacturer);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.groupBoxInformation);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxProducts);
             this.Name = "Form2";
             this.Text = "Form2";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBoxInformation.ResumeLayout(false);
+            this.groupBoxInformation.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,7 +358,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxProducts;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem holaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
@@ -369,5 +385,6 @@
         private System.Windows.Forms.RadioButton radioSensor;
         private System.Windows.Forms.RadioButton radioMicrocontroller;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxInformation;
     }
 }
