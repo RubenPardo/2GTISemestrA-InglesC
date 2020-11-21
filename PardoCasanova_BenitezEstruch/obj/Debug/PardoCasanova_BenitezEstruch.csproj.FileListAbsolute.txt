@@ -1,0 +1,20 @@
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe.config
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.pdb
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csprojAssemblyReference.cache
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form1.resources
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Properties.Resources.resources
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.GenerateResource.cache
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.exe
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.pdb
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form2.resources
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe.config
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.exe
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\bin\Debug\PardoCasanova_BenitezEstruch.pdb
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csprojAssemblyReference.cache
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form1.resources
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form2.resources
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Properties.Resources.resources
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.GenerateResource.cache
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.exe
+C:\Users\aibes\Desktop\Nueva carpeta\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.pdb
