@@ -35,7 +35,7 @@ namespace PardoCasanova_BenitezEstruch
 
         public static bool isTextEmpty(string text)
         {
-            if(text != null)
+            if (text != null)
             {
                 text = text.Trim();
                 if (text.Equals(""))
@@ -43,7 +43,7 @@ namespace PardoCasanova_BenitezEstruch
                     return true;
                 }
             }
-            
+
 
             return false;
         }
