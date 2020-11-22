@@ -33,3 +33,7 @@ F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCa
 F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.exe
 F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.pdb
 F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Resource1.resources
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\Newtonsoft.Json.dll
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\bin\Debug\Newtonsoft.Json.xml
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Resource1.resources
+D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.CopyComplete

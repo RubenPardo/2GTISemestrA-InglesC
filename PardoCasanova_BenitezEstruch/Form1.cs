@@ -25,7 +25,7 @@ namespace PardoCasanova_BenitezEstruch
             
             string password = txtPassword.Text;
 
-            if (password.Equals("12345")){
+            if (password.Equals("123")){
                 Form2 secondaryWindow = new Form2();
                 this.Hide();
                 secondaryWindow.ShowDialog();
