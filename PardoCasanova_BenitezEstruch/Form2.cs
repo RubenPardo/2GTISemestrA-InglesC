@@ -274,6 +274,7 @@ namespace PardoCasanova_BenitezEstruch
             string jsonData = JsonConvert.SerializeObject(productList);
             File.WriteAllText(productsFileName, jsonData);
             listBoxProducts.Items.Remove(product);
+            clearFormProduct();
         }
 
         private void saveNewProduct(Product product)
