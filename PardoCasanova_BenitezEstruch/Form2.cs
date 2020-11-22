@@ -39,10 +39,10 @@ namespace PardoCasanova_BenitezEstruch
         {
             try
             {
-                String jsonPlainContent = readFile(productsFileName);
+                String jsonPlainContent = Utility.readFile(productsFileName);
                 productList = JsonConvert.DeserializeObject<ProductList>(jsonPlainContent);
 
-                foreach (Product product in productList.products)
+                foreach (Product product in productList.product)
                 {
                     listBoxProducts.Items.Add(product); // podemos añadir directamente los objetos porque hemos sobreescrito
                                                         // el metodo to string del objeto que es lo que se muestra en la lista
@@ -66,28 +66,6 @@ namespace PardoCasanova_BenitezEstruch
             }
 
 
-        }
-        // read the content from the file 
-        private String readFile(String fileName)
-        {
-            String line;// used to read from the file
-            StringBuilder sb = new StringBuilder();// where the text read it are going to be stored
-
-
-            using (FileStream fs = File.Open(fileName, FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader sr = new StreamReader(fs, Encoding.GetEncoding("utf-8")))
-                {
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        sb.AppendLine(line);
-                    }
-                }
-            }
-
-
-
-            return sb.ToString();
         }
 
         private void enableDisableInfoGroupListBox(bool enableInfoGroup)
@@ -216,7 +194,7 @@ namespace PardoCasanova_BenitezEstruch
                     {
 
                         product = (Product)listBoxProducts.SelectedItem;
-                        productList.products.Remove((Product)listBoxProducts.SelectedItem);
+                        productList.product.Remove((Product)listBoxProducts.SelectedItem);
 
 
                         product.STOCK = stock;
@@ -260,7 +238,7 @@ namespace PardoCasanova_BenitezEstruch
         private void editProduct(Product product)
         {
 
-            productList.products.Add(product);
+            productList.product.Add(product);
 
             string jsonData = JsonConvert.SerializeObject(productList);
             File.WriteAllText(productsFileName, jsonData);
@@ -270,7 +248,7 @@ namespace PardoCasanova_BenitezEstruch
 
         private void removeProduct(Product product)
         {
-            productList.products.Remove(product);
+            productList.product.Remove(product);
             string jsonData = JsonConvert.SerializeObject(productList);
             File.WriteAllText(productsFileName, jsonData);
             listBoxProducts.Items.Remove(product);
@@ -279,7 +257,7 @@ namespace PardoCasanova_BenitezEstruch
 
         private void saveNewProduct(Product product)
         {
-            productList.products.Add(product);
+            productList.product.Add(product);
             string jsonData = JsonConvert.SerializeObject(productList);
             File.WriteAllText(productsFileName, jsonData);
             listBoxProducts.Items.Add(product);
@@ -335,8 +313,8 @@ namespace PardoCasanova_BenitezEstruch
 
         private void exportProductsAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 exportFile = new Form3();
-            exportFile.ShowDialog();
+            Form3 exportFileWindows = new Form3();
+            exportFileWindows.ShowDialog();
             
         }
 
