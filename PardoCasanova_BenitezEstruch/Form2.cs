@@ -333,9 +333,12 @@ namespace PardoCasanova_BenitezEstruch
             }
         }
 
-
-
-        //Delete---------------------------------
+        private void exportProductsAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 exportFile = new Form3();
+            exportFile.ShowDialog();
+            
+        }
 
     }
 
