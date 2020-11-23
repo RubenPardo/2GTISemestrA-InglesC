@@ -57,15 +57,20 @@
             this.radioSensor = new System.Windows.Forms.RadioButton();
             this.radioMicrocontroller = new System.Windows.Forms.RadioButton();
             this.groupProductType = new System.Windows.Forms.GroupBox();
+            this.lblType = new System.Windows.Forms.Label();
             this.groupBoxInformation = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
+            this.groupBoxNoProductSelected = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
             this.groupBoxListBox.SuspendLayout();
+            this.groupBoxNoProductSelected.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxProducts
@@ -73,9 +78,9 @@
             this.listBoxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.listBoxProducts.FormattingEnabled = true;
             this.listBoxProducts.ItemHeight = 22;
-            this.listBoxProducts.Location = new System.Drawing.Point(25, 66);
+            this.listBoxProducts.Location = new System.Drawing.Point(30, 113);
             this.listBoxProducts.Name = "listBoxProducts";
-            this.listBoxProducts.Size = new System.Drawing.Size(301, 334);
+            this.listBoxProducts.Size = new System.Drawing.Size(331, 290);
             this.listBoxProducts.TabIndex = 0;
             this.listBoxProducts.SelectedIndexChanged += new System.EventHandler(this.listBoxProducts_SelectedIndexChanged);
             // 
@@ -123,7 +128,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label1.Location = new System.Drawing.Point(19, 39);
+            this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 36);
             this.label1.TabIndex = 4;
@@ -132,9 +137,9 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.textBoxSearch.Location = new System.Drawing.Point(13, 26);
+            this.textBoxSearch.Location = new System.Drawing.Point(30, 65);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(223, 27);
+            this.textBoxSearch.Size = new System.Drawing.Size(233, 27);
             this.textBoxSearch.TabIndex = 5;
             // 
             // label2
@@ -148,7 +153,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.button1.Location = new System.Drawing.Point(259, 21);
+            this.button1.Location = new System.Drawing.Point(278, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 36);
             this.button1.TabIndex = 7;
@@ -200,7 +205,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(254, 425);
+            this.label7.Location = new System.Drawing.Point(267, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 12;
@@ -218,19 +223,22 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(25, 412);
+            this.btnAdd.BackColor = System.Drawing.Color.Firebrick;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(30, 509);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(301, 34);
+            this.btnAdd.Size = new System.Drawing.Size(331, 49);
             this.btnAdd.TabIndex = 14;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Text = "ADD NEW PRODUCT";
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(25, 463);
+            this.button3.Location = new System.Drawing.Point(30, 409);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 33);
+            this.button3.Size = new System.Drawing.Size(165, 42);
             this.button3.TabIndex = 15;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
@@ -238,9 +246,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(187, 463);
+            this.button4.Location = new System.Drawing.Point(199, 409);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 34);
+            this.button4.Size = new System.Drawing.Size(162, 42);
             this.button4.TabIndex = 16;
             this.button4.Text = "Edit";
             this.button4.UseVisualStyleBackColor = true;
@@ -275,7 +283,7 @@
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.txtPrice.Location = new System.Drawing.Point(386, 425);
+            this.txtPrice.Location = new System.Drawing.Point(386, 409);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(81, 28);
             this.txtPrice.TabIndex = 20;
@@ -297,7 +305,7 @@
             // radioSensor
             // 
             this.radioSensor.AutoSize = true;
-            this.radioSensor.Location = new System.Drawing.Point(22, 15);
+            this.radioSensor.Location = new System.Drawing.Point(21, 15);
             this.radioSensor.Name = "radioSensor";
             this.radioSensor.Size = new System.Drawing.Size(74, 21);
             this.radioSensor.TabIndex = 23;
@@ -309,7 +317,7 @@
             // radioMicrocontroller
             // 
             this.radioMicrocontroller.AutoSize = true;
-            this.radioMicrocontroller.Location = new System.Drawing.Point(161, 15);
+            this.radioMicrocontroller.Location = new System.Drawing.Point(112, 15);
             this.radioMicrocontroller.Name = "radioMicrocontroller";
             this.radioMicrocontroller.Size = new System.Drawing.Size(122, 21);
             this.radioMicrocontroller.TabIndex = 24;
@@ -322,14 +330,24 @@
             // 
             this.groupProductType.Controls.Add(this.radioMicrocontroller);
             this.groupProductType.Controls.Add(this.radioSensor);
-            this.groupProductType.Location = new System.Drawing.Point(170, 62);
+            this.groupProductType.Location = new System.Drawing.Point(197, 58);
             this.groupProductType.Name = "groupProductType";
-            this.groupProductType.Size = new System.Drawing.Size(297, 45);
+            this.groupProductType.Size = new System.Drawing.Size(245, 45);
             this.groupProductType.TabIndex = 25;
             this.groupProductType.TabStop = false;
             // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Location = new System.Drawing.Point(173, 75);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(0, 20);
+            this.lblType.TabIndex = 25;
+            // 
             // groupBoxInformation
             // 
+            this.groupBoxInformation.Controls.Add(this.lblType);
             this.groupBoxInformation.Controls.Add(this.btnCancel);
             this.groupBoxInformation.Controls.Add(this.btnSave);
             this.groupBoxInformation.Controls.Add(this.txtName);
@@ -352,29 +370,33 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(127, 466);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Location = new System.Drawing.Point(142, 454);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 37);
+            this.btnCancel.Size = new System.Drawing.Size(124, 49);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(6, 466);
+            this.btnSave.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(6, 454);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 37);
+            this.btnSave.Size = new System.Drawing.Size(129, 49);
             this.btnSave.TabIndex = 26;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(389, 39);
+            this.label9.Location = new System.Drawing.Point(395, 39);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(275, 36);
             this.label9.TabIndex = 27;
@@ -382,28 +404,60 @@
             // 
             // groupBoxListBox
             // 
+            this.groupBoxListBox.BackColor = System.Drawing.Color.White;
             this.groupBoxListBox.Controls.Add(this.textBoxSearch);
             this.groupBoxListBox.Controls.Add(this.listBoxProducts);
             this.groupBoxListBox.Controls.Add(this.button1);
             this.groupBoxListBox.Controls.Add(this.btnAdd);
             this.groupBoxListBox.Controls.Add(this.button4);
+            this.groupBoxListBox.Controls.Add(this.label1);
             this.groupBoxListBox.Controls.Add(this.button3);
-            this.groupBoxListBox.Location = new System.Drawing.Point(12, 78);
+            this.groupBoxListBox.Location = new System.Drawing.Point(0, 39);
             this.groupBoxListBox.Name = "groupBoxListBox";
-            this.groupBoxListBox.Size = new System.Drawing.Size(364, 525);
+            this.groupBoxListBox.Size = new System.Drawing.Size(389, 570);
             this.groupBoxListBox.TabIndex = 28;
             this.groupBoxListBox.TabStop = false;
+            // 
+            // groupBoxNoProductSelected
+            // 
+            this.groupBoxNoProductSelected.Controls.Add(this.label11);
+            this.groupBoxNoProductSelected.Controls.Add(this.label10);
+            this.groupBoxNoProductSelected.Location = new System.Drawing.Point(395, 89);
+            this.groupBoxNoProductSelected.Name = "groupBoxNoProductSelected";
+            this.groupBoxNoProductSelected.Size = new System.Drawing.Size(487, 514);
+            this.groupBoxNoProductSelected.TabIndex = 29;
+            this.groupBoxNoProductSelected.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(121, 170);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(269, 29);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "SELECT A PRODUCT";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(99, 214);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(310, 29);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "TO SHOW IT IS DETAILS";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 609);
+            this.Controls.Add(this.groupBoxNoProductSelected);
             this.Controls.Add(this.groupBoxListBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBoxInformation);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -415,6 +469,8 @@
             this.groupBoxInformation.PerformLayout();
             this.groupBoxListBox.ResumeLayout(false);
             this.groupBoxListBox.PerformLayout();
+            this.groupBoxNoProductSelected.ResumeLayout(false);
+            this.groupBoxNoProductSelected.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +511,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem exportProductsAsToolStripMenuItem;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.GroupBox groupBoxNoProductSelected;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }
