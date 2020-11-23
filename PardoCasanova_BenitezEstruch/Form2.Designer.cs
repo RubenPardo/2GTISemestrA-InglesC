@@ -61,7 +61,7 @@
             this.groupBoxInformation = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelInfoTitulo = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
             this.groupBoxNoProductSelected = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -93,7 +93,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(897, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(897, 30);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -392,15 +392,14 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label9
+            // labelInfoTitulo
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(395, 39);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(275, 36);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Product Information";
+            this.labelInfoTitulo.AutoSize = true;
+            this.labelInfoTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoTitulo.Location = new System.Drawing.Point(395, 39);
+            this.labelInfoTitulo.Name = "labelInfoTitulo";
+            this.labelInfoTitulo.Size = new System.Drawing.Size(0, 36);
+            this.labelInfoTitulo.TabIndex = 27;
             // 
             // groupBoxListBox
             // 
@@ -455,7 +454,7 @@
             this.ClientSize = new System.Drawing.Size(897, 609);
             this.Controls.Add(this.groupBoxNoProductSelected);
             this.Controls.Add(this.groupBoxListBox);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.labelInfoTitulo);
             this.Controls.Add(this.groupBoxInformation);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip2);
@@ -506,7 +505,7 @@
         private System.Windows.Forms.RadioButton radioMicrocontroller;
         private System.Windows.Forms.GroupBox groupProductType;
         private System.Windows.Forms.GroupBox groupBoxInformation;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelInfoTitulo;
         private System.Windows.Forms.GroupBox groupBoxListBox;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;

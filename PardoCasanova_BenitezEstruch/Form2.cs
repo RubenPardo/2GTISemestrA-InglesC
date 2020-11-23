@@ -70,6 +70,9 @@ namespace PardoCasanova_BenitezEstruch
 
         private void enableDisableInfoGroupListBox(bool enableInfoGroup)
         {
+            // cambiar el titulo
+            labelInfoTitulo.Text = enableInfoGroup ? "Add new Product" : "Product Information";
+
             // cambiamos el estilo para que parezca el fondo
             // los hacemos readonly
             // y les quitamos el cursos por si al salir del editar se ha quedado
@@ -150,6 +153,7 @@ namespace PardoCasanova_BenitezEstruch
         {
             isEdit = false;
             clearFormProduct();
+            groupBoxNoProductSelected.Visible = false;
             enableDisableInfoGroupListBox(true);
 
         }
@@ -164,6 +168,7 @@ namespace PardoCasanova_BenitezEstruch
             else
             {
                 clearFormProduct();
+                groupBoxNoProductSelected.Visible = true;
             }
             enableDisableInfoGroupListBox(false);
 
