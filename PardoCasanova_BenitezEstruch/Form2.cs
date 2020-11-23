@@ -98,12 +98,14 @@ namespace PardoCasanova_BenitezEstruch
             txtStock.ReadOnly = !enableInfoGroup;
             txtStock.TabStop = enableInfoGroup;
 
-            groupProductType.Enabled = enableInfoGroup;
+            lblType.Visible = !enableInfoGroup;
+            groupProductType.Visible = enableInfoGroup;
 
             btnSave.Visible = enableInfoGroup;
             btnCancel.Visible = enableInfoGroup;
 
             groupBoxListBox.Enabled = !enableInfoGroup;
+            
 
         }
 
@@ -119,18 +121,22 @@ namespace PardoCasanova_BenitezEstruch
 
             if (item != null)
             {
+                groupBoxNoProductSelected.Visible = false;
                 txtName.Text = item.NAME;
                 txtManufacturer.Text = item.MANUFACTURER;
                 txtDescript.Text = item.DESCRIPTION;
                 txtPrice.Text = item.PRICE;
                 txtStock.Text = item.STOCK;
+                
                 if (item.TYPE.Equals("MICRO"))
                 {
+                    lblType.Text = "Microprocessor";
                     radioMicrocontroller.Checked = true;
                     radioSensor.Checked = false;
                 }
                 else
                 {
+                    lblType.Text = "Sensor";
                     radioSensor.Checked = true;
                     radioMicrocontroller.Checked = false;
                 }
@@ -253,6 +259,7 @@ namespace PardoCasanova_BenitezEstruch
             File.WriteAllText(productsFileName, jsonData);
             listBoxProducts.Items.Remove(product);
             clearFormProduct();
+            groupBoxNoProductSelected.Visible = true;
         }
 
         private void saveNewProduct(Product product)
@@ -270,8 +277,12 @@ namespace PardoCasanova_BenitezEstruch
             txtDescript.Text = "";
             txtPrice.Text = "";
             txtStock.Text = "";
+            lblType.Text = "";
             radioSensor.Checked = false;
             radioMicrocontroller.Checked = false;
+
+            
+
         }
 
 
