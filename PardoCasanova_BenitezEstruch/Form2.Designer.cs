@@ -32,10 +32,11 @@
             this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.holaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportProductsAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
-            this.exportProductsAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
@@ -100,6 +100,13 @@
             this.holaToolStripMenuItem1.Size = new System.Drawing.Size(46, 24);
             this.holaToolStripMenuItem1.Text = "File";
             // 
+            // exportProductsAsToolStripMenuItem
+            // 
+            this.exportProductsAsToolStripMenuItem.Name = "exportProductsAsToolStripMenuItem";
+            this.exportProductsAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportProductsAsToolStripMenuItem.Text = "Export products as...";
+            this.exportProductsAsToolStripMenuItem.Click += new System.EventHandler(this.exportProductsAsToolStripMenuItem_Click);
+            // 
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
@@ -122,13 +129,13 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Product List";
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
-            this.textBox1.Location = new System.Drawing.Point(13, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 27);
-            this.textBox1.TabIndex = 5;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.12F);
+            this.textBoxSearch.Location = new System.Drawing.Point(13, 26);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(223, 27);
+            this.textBoxSearch.TabIndex = 5;
             // 
             // label2
             // 
@@ -147,6 +154,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -374,7 +382,7 @@
             // 
             // groupBoxListBox
             // 
-            this.groupBoxListBox.Controls.Add(this.textBox1);
+            this.groupBoxListBox.Controls.Add(this.textBoxSearch);
             this.groupBoxListBox.Controls.Add(this.listBoxProducts);
             this.groupBoxListBox.Controls.Add(this.button1);
             this.groupBoxListBox.Controls.Add(this.btnAdd);
@@ -385,13 +393,6 @@
             this.groupBoxListBox.Size = new System.Drawing.Size(364, 525);
             this.groupBoxListBox.TabIndex = 28;
             this.groupBoxListBox.TabStop = false;
-            // 
-            // exportProductsAsToolStripMenuItem
-            // 
-            this.exportProductsAsToolStripMenuItem.Name = "exportProductsAsToolStripMenuItem";
-            this.exportProductsAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exportProductsAsToolStripMenuItem.Text = "Export products as...";
-            this.exportProductsAsToolStripMenuItem.Click += new System.EventHandler(this.exportProductsAsToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -427,7 +428,7 @@
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;

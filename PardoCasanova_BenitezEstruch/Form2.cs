@@ -318,6 +318,47 @@ namespace PardoCasanova_BenitezEstruch
             
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string txtSerch = textBoxSearch.Text;
+            txtSerch = txtSerch.ToLower();
+            // solo si introduce texto
+            if (!Utility.isTextEmpty(txtSerch))
+            {
+                Product p = getProductByName(txtSerch);
+                if (p != null)
+                {
+                    listBoxProducts.SelectedItem = p; // seleccionamos el producto
+                    itemToInfoGroup(p);// lo pasamos al info group
+                }
+                else
+                {
+                    Utility.showDialogWarning("No product found", "A product with that name does not exist");
+                }
+            }
+            else { 
+            
+                Utility.showDialogWarning("No product found", "A name is needed to search a product");
+            }
+            
+            
+        }
+
+        ///devolver el primer producto que empiece por lo indicado
+        /// comparamos todo con minuscula
+        private Product getProductByName(string name)
+        {
+            Product pRes = null;
+            foreach(Product p in productList.product)
+            {
+                if (p.NAME.ToLower().StartsWith(name.ToLower()))
+                {
+                    pRes = p;
+                    break;
+                }
+            }
+            return pRes;
+        }
     }
 
 
