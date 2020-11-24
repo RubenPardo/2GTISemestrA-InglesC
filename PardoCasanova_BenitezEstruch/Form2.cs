@@ -68,6 +68,8 @@ namespace PardoCasanova_BenitezEstruch
 
         }
 
+
+        // habilitar un form u otro
         private void enableDisableInfoGroupListBox(bool enableInfoGroup)
         {
             // cambiar el titulo
@@ -113,12 +115,15 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
+        // callback on click list product
         private void listBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             // mostramos el producto en el form
             Product item = (Product)listBoxProducts.SelectedItem;
             itemToInfoGroup(item);
         }
+
+        // mostrar el producto en la informacion
         private void itemToInfoGroup(Product item)
         {
 
@@ -148,7 +153,7 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
-
+        // añadir producto ==========
         private void btnAdd_Click(object sender, EventArgs e)
         {
             isEdit = false;
@@ -157,6 +162,8 @@ namespace PardoCasanova_BenitezEstruch
             enableDisableInfoGroupListBox(true);
 
         }
+
+        // guardar producto =================
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Product item = (Product)listBoxProducts.SelectedItem;
@@ -173,7 +180,7 @@ namespace PardoCasanova_BenitezEstruch
             enableDisableInfoGroupListBox(false);
 
 
-        }
+        }     
         private void btnSave_Click(object sender, EventArgs e)
         {
             // cogemos todos los datos
@@ -246,27 +253,6 @@ namespace PardoCasanova_BenitezEstruch
 
         }
 
-        private void editProduct(Product product)
-        {
-
-            productList.product.Add(product);
-
-            string jsonData = JsonConvert.SerializeObject(productList);
-            File.WriteAllText(productsFileName, jsonData);
-
-            listBoxProducts.Items.Add(product);
-        }
-
-        private void removeProduct(Product product)
-        {
-            productList.product.Remove(product);
-            string jsonData = JsonConvert.SerializeObject(productList);
-            File.WriteAllText(productsFileName, jsonData);
-            listBoxProducts.Items.Remove(product);
-            clearFormProduct();
-            groupBoxNoProductSelected.Visible = true;
-        }
-
         private void saveNewProduct(Product product)
         {
             productList.product.Add(product);
@@ -304,7 +290,18 @@ namespace PardoCasanova_BenitezEstruch
                 Utility.showDialogWarning("Warning", "You must select a product");
             }
         }
+        private void editProduct(Product product)
+        {
 
+            productList.product.Add(product);
+
+            string jsonData = JsonConvert.SerializeObject(productList);
+            File.WriteAllText(productsFileName, jsonData);
+
+            listBoxProducts.Items.Add(product);
+        }
+
+        // borrar =================
         private void button3_Click(object sender, EventArgs e)
         {
             if (listBoxProducts.SelectedItem != null)
@@ -326,9 +323,17 @@ namespace PardoCasanova_BenitezEstruch
                 Utility.showDialogWarning("Warning", "You must select a product");
             }
         }
+        private void removeProduct(Product product)
+        {
+            productList.product.Remove(product);
+            string jsonData = JsonConvert.SerializeObject(productList);
+            File.WriteAllText(productsFileName, jsonData);
+            listBoxProducts.Items.Remove(product);
+            clearFormProduct();
+            groupBoxNoProductSelected.Visible = true;
+        }
 
-       
-
+        // buscar ============
         private void button1_Click(object sender, EventArgs e)
         {
             string txtSerch = textBoxSearch.Text;
@@ -372,6 +377,7 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
+        // callbacks de los menus superiores ====================
         private void applyDiscountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form4 applyDiscount = new Form4();
@@ -380,7 +386,6 @@ namespace PardoCasanova_BenitezEstruch
 
             //this.Close();
         }
-
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -395,6 +400,8 @@ namespace PardoCasanova_BenitezEstruch
             exportFileWindows.ShowDialog();
 
         }
+
+
 
         public void discount(double discount)
         {
