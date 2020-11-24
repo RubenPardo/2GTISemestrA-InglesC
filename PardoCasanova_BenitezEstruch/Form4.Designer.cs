@@ -80,7 +80,7 @@
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.Discount);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Discount";
             this.ResumeLayout(false);
             this.PerformLayout();
 

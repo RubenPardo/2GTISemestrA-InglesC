@@ -9,8 +9,7 @@ namespace PardoCasanova_BenitezEstruch
 {
     class Product
     {
-        // atributes
-        private string id;// auto generated unique value
+        private string id;
         private string name;
         private string type;
         private string manufacturer;
@@ -20,7 +19,6 @@ namespace PardoCasanova_BenitezEstruch
 
         private string[] typesAllowed = { "sensor", "micro" };
 
-        // properties
         public string ID
         {
             get { return id; }
@@ -41,7 +39,6 @@ namespace PardoCasanova_BenitezEstruch
         public string NAME
         {
             get { return name; }
-            // it can't be empty text and will be always normalize "text->"Text"
             set
             {
                 Console.WriteLine(value);
@@ -60,7 +57,7 @@ namespace PardoCasanova_BenitezEstruch
         public string TYPE
         {
             get { return type; }
-            // only can take the "SENSOR"|"MICRO" values, will be normalize
+
             set
             {
                 Console.WriteLine(value);
@@ -80,7 +77,7 @@ namespace PardoCasanova_BenitezEstruch
         public string MANUFACTURER
         {
             get { return manufacturer; }
-            // it can't be empty text and will be always normalize "text->"Text"
+
             set
             {
                 Console.WriteLine(value);
@@ -99,7 +96,7 @@ namespace PardoCasanova_BenitezEstruch
         public string DESCRIPTION
         {
             get { return description; }
-            // it can be empty text and will be always normalize "text->"Text"
+
             set
             {
                 Console.WriteLine(value);
@@ -110,7 +107,7 @@ namespace PardoCasanova_BenitezEstruch
         public string PRICE
         {
             get { return price; }
-            // try to convert to double and not negative
+
             set
             {
                 Console.WriteLine(value);
@@ -130,7 +127,7 @@ namespace PardoCasanova_BenitezEstruch
             set
             {
                 Console.WriteLine(value);
-                // only positive integer numbers
+
                 if (isPositiveIntegerValue(value))
                 {
                     stock = value;
@@ -143,7 +140,6 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
-        // constructor
         public Product( string name, string type, string manufacturer, string description, string price, string stock)
         {
             ID = Utility.generateID();
@@ -155,22 +151,20 @@ namespace PardoCasanova_BenitezEstruch
             STOCK = stock;
         }
 
-        // sirve para cuando creamos un producto nuevo 
+
         public Product()
         {
             ID = Utility.generateID();
 
         }
 
-        // methods 
+
         private bool isValidType(string type)
         {
             return typesAllowed.Contains(type.ToLower());
         }
 
-        //regex \b^[0-9]\d*\b no puede ser porque permite poner 2323.11212 y lo detecta como dos
-        // por tanto se debe usar esto: ^[0-9]\d*$ el $ indica que es solo una unica cadena, sin puntos ni espacios permitidos
-        // ponemos el ^ delante para solo pillar numeros, de otra forma si se pone un espacio lo pilla o un punto
+
         private bool isPositiveIntegerValue(string number)
         {
 
@@ -180,12 +174,11 @@ namespace PardoCasanova_BenitezEstruch
             return match.Success;
 
         }
-        // regex = ^[0-9]\d*.\d*$ -> lo mismo que antes pero el valor es solo si son digitos positvios separados por un punto
+
         private bool isPositiveDecimalValue(string number)
         {
 
             Match matchInteger = Regex.Match(number, @"^[0-9]\d*$");
-            // poner 12 de precio tambien es valido
             if (matchInteger.Success)
             {
                 return true;
@@ -201,7 +194,6 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
-        // de esta forma si ponemos objetos directamente en el list box, como intente hacer el to string, saldra solo el nombre
         public override string ToString() {
             return NAME;
         }

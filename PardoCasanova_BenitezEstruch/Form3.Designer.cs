@@ -97,7 +97,7 @@
             this.radioCSV.TabStop = true;
             this.radioCSV.Text = "...to CSV";
             this.radioCSV.UseVisualStyleBackColor = true;
-            this.radioCSV.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.radioCSV.CheckedChanged += new System.EventHandler(this.radioButtonToCSV);
             // 
             // radioXML
             // 
@@ -109,7 +109,7 @@
             this.radioXML.TabStop = true;
             this.radioXML.Text = "...to XML";
             this.radioXML.UseVisualStyleBackColor = true;
-            this.radioXML.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radioXML.CheckedChanged += new System.EventHandler(this.radioButtonToXML);
             // 
             // Form3
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Export to...";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

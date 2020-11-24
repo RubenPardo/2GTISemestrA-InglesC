@@ -80,8 +80,8 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
-        //xml
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+
+        private void radioButtonToXML(object sender, EventArgs e)
         {
             XNode node = JsonConvert.DeserializeXNode(jsonPlainContent, "products");
             StringBuilder write = new StringBuilder();
@@ -90,8 +90,8 @@ namespace PardoCasanova_BenitezEstruch
         }
 
 
-        //csv
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+
+        private void radioButtonToCSV(object sender, EventArgs e)
         {
             StringBuilder write = new StringBuilder();
             foreach (Product product in productList.product)
@@ -107,6 +107,7 @@ namespace PardoCasanova_BenitezEstruch
 
             richTextBox1.Text = write.ToString();
         }
+
 
         private void btnCancelExport_Click(object sender, EventArgs e)
         {

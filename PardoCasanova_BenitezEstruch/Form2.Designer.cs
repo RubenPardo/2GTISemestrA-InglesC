@@ -34,6 +34,7 @@
             this.holaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exportProductsAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applyDiscountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
@@ -66,7 +67,6 @@
             this.groupBoxNoProductSelected = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.applyDiscountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
@@ -121,6 +121,13 @@
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
             // 
+            // applyDiscountToolStripMenuItem
+            // 
+            this.applyDiscountToolStripMenuItem.Name = "applyDiscountToolStripMenuItem";
+            this.applyDiscountToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.applyDiscountToolStripMenuItem.Text = "Apply Discount";
+            this.applyDiscountToolStripMenuItem.Click += new System.EventHandler(this.applyDiscountToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -163,7 +170,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.searchButton);
             // 
             // label3
             // 
@@ -246,7 +253,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.removeButton);
             // 
             // button4
             // 
@@ -256,7 +263,7 @@
             this.button4.TabIndex = 16;
             this.button4.Text = "Edit";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.editButton);
             // 
             // txtName
             // 
@@ -415,9 +422,9 @@
             this.groupBoxListBox.Controls.Add(this.button4);
             this.groupBoxListBox.Controls.Add(this.label1);
             this.groupBoxListBox.Controls.Add(this.button3);
-            this.groupBoxListBox.Location = new System.Drawing.Point(0, 39);
+            this.groupBoxListBox.Location = new System.Drawing.Point(12, 39);
             this.groupBoxListBox.Name = "groupBoxListBox";
-            this.groupBoxListBox.Size = new System.Drawing.Size(389, 570);
+            this.groupBoxListBox.Size = new System.Drawing.Size(377, 564);
             this.groupBoxListBox.TabIndex = 28;
             this.groupBoxListBox.TabStop = false;
             // 
@@ -451,13 +458,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "SELECT A PRODUCT";
             // 
-            // applyDiscountToolStripMenuItem
-            // 
-            this.applyDiscountToolStripMenuItem.Name = "applyDiscountToolStripMenuItem";
-            this.applyDiscountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.applyDiscountToolStripMenuItem.Text = "Apply Discount";
-            this.applyDiscountToolStripMenuItem.Click += new System.EventHandler(this.applyDiscountToolStripMenuItem_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,7 +470,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Mainform";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.groupProductType.ResumeLayout(false);
