@@ -51,5 +51,10 @@ namespace PardoCasanova_BenitezEstruch
                 Utility.showDialogError("Error", "Error.");
             }
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
