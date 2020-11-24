@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -65,13 +65,13 @@
             this.txtPassword.Size = new System.Drawing.Size(230, 32);
             this.txtPassword.TabIndex = 2;
             // 
-            // textBox2
+            // txtUser
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.textBox2.Location = new System.Drawing.Point(160, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 32);
-            this.textBox2.TabIndex = 3;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
+            this.txtUser.Location = new System.Drawing.Point(160, 82);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(230, 32);
+            this.txtUser.TabIndex = 3;
             // 
             // button1
             // 
@@ -103,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(441, 310);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
     }
