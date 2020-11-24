@@ -48,7 +48,7 @@ namespace PardoCasanova_BenitezEstruch
             }
             catch (Exception)
             {
-                Utility.showDialogError("Error", "Error.");
+                Utility.showDialogError("Error", "Discount could not be applied.");
             }
         }
 
