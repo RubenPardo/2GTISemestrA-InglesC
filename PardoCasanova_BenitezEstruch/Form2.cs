@@ -70,6 +70,9 @@ namespace PardoCasanova_BenitezEstruch
 
         private void enableDisableInfoGroupListBox(bool enableInfoGroup)
         {
+            // cambiar el titulo
+            labelInfoTitulo.Text = enableInfoGroup ? "Add new Product" : "Product Information";
+
             // cambiamos el estilo para que parezca el fondo
             // los hacemos readonly
             // y les quitamos el cursos por si al salir del editar se ha quedado
@@ -98,12 +101,14 @@ namespace PardoCasanova_BenitezEstruch
             txtStock.ReadOnly = !enableInfoGroup;
             txtStock.TabStop = enableInfoGroup;
 
-            groupProductType.Enabled = enableInfoGroup;
+            lblType.Visible = !enableInfoGroup;
+            groupProductType.Visible = enableInfoGroup;
 
             btnSave.Visible = enableInfoGroup;
             btnCancel.Visible = enableInfoGroup;
 
             groupBoxListBox.Enabled = !enableInfoGroup;
+            
 
         }
 
@@ -119,18 +124,22 @@ namespace PardoCasanova_BenitezEstruch
 
             if (item != null)
             {
+                groupBoxNoProductSelected.Visible = false;
                 txtName.Text = item.NAME;
                 txtManufacturer.Text = item.MANUFACTURER;
                 txtDescript.Text = item.DESCRIPTION;
                 txtPrice.Text = item.PRICE;
                 txtStock.Text = item.STOCK;
+                
                 if (item.TYPE.Equals("MICRO"))
                 {
+                    lblType.Text = "Microprocessor";
                     radioMicrocontroller.Checked = true;
                     radioSensor.Checked = false;
                 }
                 else
                 {
+                    lblType.Text = "Sensor";
                     radioSensor.Checked = true;
                     radioMicrocontroller.Checked = false;
                 }
@@ -144,6 +153,7 @@ namespace PardoCasanova_BenitezEstruch
         {
             isEdit = false;
             clearFormProduct();
+            groupBoxNoProductSelected.Visible = false;
             enableDisableInfoGroupListBox(true);
 
         }
@@ -158,6 +168,7 @@ namespace PardoCasanova_BenitezEstruch
             else
             {
                 clearFormProduct();
+                groupBoxNoProductSelected.Visible = true;
             }
             enableDisableInfoGroupListBox(false);
 
@@ -253,6 +264,7 @@ namespace PardoCasanova_BenitezEstruch
             File.WriteAllText(productsFileName, jsonData);
             listBoxProducts.Items.Remove(product);
             clearFormProduct();
+            groupBoxNoProductSelected.Visible = true;
         }
 
         private void saveNewProduct(Product product)
@@ -270,8 +282,12 @@ namespace PardoCasanova_BenitezEstruch
             txtDescript.Text = "";
             txtPrice.Text = "";
             txtStock.Text = "";
+            lblType.Text = "";
             radioSensor.Checked = false;
             radioMicrocontroller.Checked = false;
+
+            
+
         }
 
 
@@ -318,6 +334,7 @@ namespace PardoCasanova_BenitezEstruch
             
         }
 
+<<<<<<< HEAD
         private void applyDiscountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form4 applyDiscount = new Form4();
@@ -336,6 +353,50 @@ namespace PardoCasanova_BenitezEstruch
                 double price = Convert.ToDouble(product.PRICE);
                 double discountValue = (price * discount) / 100;
                 double finalPrice = price - discountValue;
+=======
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string txtSerch = textBoxSearch.Text;
+            txtSerch = txtSerch.ToLower();
+            // solo si introduce texto
+            if (!Utility.isTextEmpty(txtSerch))
+            {
+                Product p = getProductByName(txtSerch);
+                if (p != null)
+                {
+                    listBoxProducts.SelectedItem = p; // seleccionamos el producto
+                    itemToInfoGroup(p);// lo pasamos al info group
+                }
+                else
+                {
+                    Utility.showDialogWarning("No product found", "A product with that name does not exist");
+                }
+            }
+            else { 
+            
+                Utility.showDialogWarning("No product found", "A name is needed to search a product");
+            }
+            
+            
+        }
+
+        ///devolver el primer producto que empiece por lo indicado
+        /// comparamos todo con minuscula
+        private Product getProductByName(string name)
+        {
+            Product pRes = null;
+            foreach(Product p in productList.product)
+            {
+                if (p.NAME.ToLower().StartsWith(name.ToLower()))
+                {
+                    pRes = p;
+                    break;
+                }
+            }
+            return pRes;
+        }
+    }
+>>>>>>> develop
 
                 product.PRICE = finalPrice.ToString();
                 listBoxProducts.Items.Remove(product);
