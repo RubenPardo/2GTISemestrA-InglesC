@@ -404,6 +404,7 @@ namespace PardoCasanova_BenitezEstruch
             string jsonData = JsonConvert.SerializeObject(productList);
             File.WriteAllText(productsFileName, jsonData);
             initListBox();
+            groupBoxNoProductSelected.Visible = true;
         }
 
     }

@@ -64,8 +64,9 @@
             this.labelInfoTitulo = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
             this.groupBoxNoProductSelected = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.applyDiscountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
@@ -93,7 +94,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(897, 30);
+            this.menuStrip2.Size = new System.Drawing.Size(897, 28);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -114,6 +115,8 @@
             // 
             // productsToolStripMenuItem
             // 
+            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.applyDiscountToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
@@ -427,6 +430,16 @@
             this.groupBoxNoProductSelected.TabIndex = 29;
             this.groupBoxNoProductSelected.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(99, 214);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(310, 29);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "TO SHOW IT IS DETAILS";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -437,15 +450,12 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "SELECT A PRODUCT";
             // 
-            // label11
+            // applyDiscountToolStripMenuItem
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(99, 214);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(310, 29);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "TO SHOW IT IS DETAILS";
+            this.applyDiscountToolStripMenuItem.Name = "applyDiscountToolStripMenuItem";
+            this.applyDiscountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.applyDiscountToolStripMenuItem.Text = "Apply Discount";
+            this.applyDiscountToolStripMenuItem.Click += new System.EventHandler(this.applyDiscountToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -514,5 +524,6 @@
         private System.Windows.Forms.GroupBox groupBoxNoProductSelected;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem applyDiscountToolStripMenuItem;
     }
 }
