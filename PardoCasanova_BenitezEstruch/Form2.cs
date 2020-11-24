@@ -327,12 +327,7 @@ namespace PardoCasanova_BenitezEstruch
             }
         }
 
-        private void exportProductsAsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 exportFileWindows = new Form3();
-            exportFileWindows.ShowDialog();
-            
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -384,6 +379,21 @@ namespace PardoCasanova_BenitezEstruch
             applyDiscount.ShowDialog(this);
 
             //this.Close();
+        }
+
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 about = new Form5();
+
+            about.ShowDialog(this);
+        }
+
+        private void exportProductsAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 exportFileWindows = new Form3();
+            exportFileWindows.ShowDialog();
+
         }
 
         public void discount(double discount)
