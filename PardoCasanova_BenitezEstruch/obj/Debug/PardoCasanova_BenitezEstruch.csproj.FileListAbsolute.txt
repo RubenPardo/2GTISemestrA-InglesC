@@ -38,8 +38,4 @@ D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\P
 D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Resource1.resources
 D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.csproj.CopyComplete
 D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form3.resources
-<<<<<<< HEAD
-D:\aibes\2n\English for developers\1r Quatri\project_exam\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form4.resources
-=======
 F:\Cosas\CARPETA UNI\2 curso\Ingles C#\C#\Proyectos\2GTISemestrA-InglesC\PardoCasanova_BenitezEstruch\obj\Debug\PardoCasanova_BenitezEstruch.Form3.resources
->>>>>>> develop

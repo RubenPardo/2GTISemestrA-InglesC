@@ -334,26 +334,6 @@ namespace PardoCasanova_BenitezEstruch
             
         }
 
-<<<<<<< HEAD
-        private void applyDiscountToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form4 applyDiscount = new Form4();
-      
-            applyDiscount.ShowDialog(this);
-            
-            //this.Close();
-        } 
-
-        public void discount(double discount)
-        {
-    
-            foreach (Product product in productList.product)
-            {
-
-                double price = Convert.ToDouble(product.PRICE);
-                double discountValue = (price * discount) / 100;
-                double finalPrice = price - discountValue;
-=======
         private void button1_Click(object sender, EventArgs e)
         {
             string txtSerch = textBoxSearch.Text;
@@ -396,16 +376,6 @@ namespace PardoCasanova_BenitezEstruch
             return pRes;
         }
     }
->>>>>>> develop
 
-                product.PRICE = finalPrice.ToString();
-                listBoxProducts.Items.Remove(product);
 
-            }
-            clearFormProduct();
-            string jsonData = JsonConvert.SerializeObject(productList);
-            File.WriteAllText(productsFileName, jsonData);
-            initListBox();
-        }
-    }
 }

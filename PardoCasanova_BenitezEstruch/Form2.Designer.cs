@@ -63,13 +63,9 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.labelInfoTitulo = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
-<<<<<<< HEAD
-            this.applyDiscountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-=======
             this.groupBoxNoProductSelected = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
->>>>>>> develop
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
@@ -118,8 +114,6 @@
             // 
             // productsToolStripMenuItem
             // 
-            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.applyDiscountToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
@@ -423,14 +417,6 @@
             this.groupBoxListBox.TabIndex = 28;
             this.groupBoxListBox.TabStop = false;
             // 
-<<<<<<< HEAD
-            // applyDiscountToolStripMenuItem
-            // 
-            this.applyDiscountToolStripMenuItem.Name = "applyDiscountToolStripMenuItem";
-            this.applyDiscountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.applyDiscountToolStripMenuItem.Text = "Apply discount";
-            this.applyDiscountToolStripMenuItem.Click += new System.EventHandler(this.applyDiscountToolStripMenuItem_Click);
-=======
             // groupBoxNoProductSelected
             // 
             this.groupBoxNoProductSelected.Controls.Add(this.label11);
@@ -460,7 +446,6 @@
             this.label11.Size = new System.Drawing.Size(310, 29);
             this.label11.TabIndex = 1;
             this.label11.Text = "TO SHOW IT IS DETAILS";
->>>>>>> develop
             // 
             // Form2
             // 
@@ -525,13 +510,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem exportProductsAsToolStripMenuItem;
-<<<<<<< HEAD
-        private System.Windows.Forms.ToolStripMenuItem applyDiscountToolStripMenuItem;
-=======
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.GroupBox groupBoxNoProductSelected;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
->>>>>>> develop
     }
 }
