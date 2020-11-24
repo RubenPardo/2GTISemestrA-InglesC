@@ -32,6 +32,7 @@
             this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.holaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportProductsAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +62,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBoxListBox = new System.Windows.Forms.GroupBox();
-            this.exportProductsAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applyDiscountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.groupProductType.SuspendLayout();
             this.groupBoxInformation.SuspendLayout();
@@ -100,8 +101,17 @@
             this.holaToolStripMenuItem1.Size = new System.Drawing.Size(46, 24);
             this.holaToolStripMenuItem1.Text = "File";
             // 
+            // exportProductsAsToolStripMenuItem
+            // 
+            this.exportProductsAsToolStripMenuItem.Name = "exportProductsAsToolStripMenuItem";
+            this.exportProductsAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exportProductsAsToolStripMenuItem.Text = "Export products as...";
+            this.exportProductsAsToolStripMenuItem.Click += new System.EventHandler(this.exportProductsAsToolStripMenuItem_Click);
+            // 
             // productsToolStripMenuItem
             // 
+            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.applyDiscountToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.productsToolStripMenuItem.Text = "Products";
@@ -386,12 +396,12 @@
             this.groupBoxListBox.TabIndex = 28;
             this.groupBoxListBox.TabStop = false;
             // 
-            // exportProductsAsToolStripMenuItem
+            // applyDiscountToolStripMenuItem
             // 
-            this.exportProductsAsToolStripMenuItem.Name = "exportProductsAsToolStripMenuItem";
-            this.exportProductsAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exportProductsAsToolStripMenuItem.Text = "Export products as...";
-            this.exportProductsAsToolStripMenuItem.Click += new System.EventHandler(this.exportProductsAsToolStripMenuItem_Click);
+            this.applyDiscountToolStripMenuItem.Name = "applyDiscountToolStripMenuItem";
+            this.applyDiscountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.applyDiscountToolStripMenuItem.Text = "Apply discount";
+            this.applyDiscountToolStripMenuItem.Click += new System.EventHandler(this.applyDiscountToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -454,5 +464,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem exportProductsAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applyDiscountToolStripMenuItem;
     }
 }
