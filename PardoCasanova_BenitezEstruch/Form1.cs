@@ -39,8 +39,9 @@ namespace PardoCasanova_BenitezEstruch
                 secondaryWindow.ShowDialog();
                 this.Close();
             }
-            else if(password.Length == 0){
-                Utility.showDialogError("Password field is empty.","Please, insert a password.");
+            else if(password.Length == 0 || user.Length == 0)
+            {
+                Utility.showDialogWarning("Empty fields.", "Please, insert an username and a password.");
             }
             else
             {
